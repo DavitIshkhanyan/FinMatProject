@@ -25,8 +25,11 @@
                 success:function(data){
                     // $("#main").html(data); 
                     // $("document").html(data); 
-                    $("#price").html(data);
-                    console.log(data);
+                    $("#price").html(data.slice(0,6));
+
+                    console.log(data.slice(0,6));
+                    // console.log(data.slice(6));
+                    $("#diag").html(data.slice(6));
                 } 
             });
         }
@@ -99,6 +102,7 @@
         time.sleep(60) %}  -->
     <!-- {{ price }} -->
     <h3 id="price" class="price"></h3>
+    <div id='diag' class="diag"></div>
 </body>
 <!-- <script>
     setTimeout(function reload() {location.reload()}, 2000)
